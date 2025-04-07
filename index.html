@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unit Converter</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Unit Converter</h1>
+    <div class="input-section">
+      <select id="categorySelect" onchange="updateUnits()">
+        <option value="Temperature">Temperature</option>
+        <option value="Length">Length / Distance</option>
+        <option value="Weight">Weight / Mass</option>
+        <option value="Volume">Volume / Capacity</option>
+        <option value="Speed">Speed</option>
+        <option value="Time">Time</option>
+      </select>
+      <input type="number" id="valueInput" placeholder="Enter value" />
+      <select id="unitSelect">
+        <!-- Options will be populated dynamically -->
+      </select>
+      <button onclick="convert()">Convert</button>
+    </div>
+    <div id="results" class="results"></div>
+    <canvas id="tempChart" width="400" height="300"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
